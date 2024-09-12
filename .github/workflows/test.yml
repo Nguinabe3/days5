@@ -18,7 +18,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Test
         run: pytest
-      - name: Connecte ENV
+      - name: ConnecteENV
         run: |
            echo "secret:${{secrets.SECRET}}"
 

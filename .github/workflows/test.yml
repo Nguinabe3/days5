@@ -1,5 +1,4 @@
 name: TestCode
-
 on:
   push:
     branches:
@@ -15,7 +14,8 @@ jobs:
           python-version: "3.10"
 
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: |
+         pip install -r requirements.txt
       - name: Run Test
         run: pytest
       - name: ConnecteENV

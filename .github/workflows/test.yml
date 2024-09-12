@@ -15,9 +15,12 @@ jobs:
           python-version: "3.10"
 
       - name: Install Dependencies
-        run: pip install -r requrements.txt
+        run: pip install -r requirements.txt
       - name: Run Test
-        env:
-            MYVAR : ${{vars.MYVAR}}
         run: pytest
+      - name: Connecte ENV
+        run: |
+           echo "secret:${{secrets.SECRET}}"
+
+
       
